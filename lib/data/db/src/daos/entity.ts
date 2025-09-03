@@ -256,7 +256,7 @@ export abstract class Entity<ET extends IEntity> implements IEntityDao<ET> {
       AND entityQuery.subscriptionId = :subscriptionId
       AND (NOT :prefixMatchId::boolean OR entityQuery.entityId LIKE FORMAT('%s%%',:entityIdPrefix::text))
       AND (:tagValues::text IS NULL OR entityQuery.tags @> :tagValues::jsonb)
-      AND (:tagKeys::text IS NULL OR entityQuery.tags ??& :tagKeys::text[])
+      AND (:tagKeys::text IS NULL OR entityQuery.tags ?& :tagKeys::text[])
       AND (:stateParam::entity_state IS NULL OR entityQuery.state = :stateParam::entity_state)
       AND (NOT :filterExpired::boolean OR entityQuery.expires IS NULL OR entityQuery.expires > NOW())` +
       (parentEntityType

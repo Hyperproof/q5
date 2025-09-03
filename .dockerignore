@@ -1,6 +1,6 @@
 *
 !.yarnrc
-!.yarn/releases/yarn-1.21.1.cjs
+!.yarn/releases/yarn-1.22.19.cjs
 !package.json
 !tsconfig.json
 !yarn.lock

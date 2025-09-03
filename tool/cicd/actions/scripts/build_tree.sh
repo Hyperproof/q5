@@ -6,7 +6,7 @@ echoerr() { printf "%s\n" "$*" >&2; }
 
 # -- Script --
 echoerr "Setting yarn version:"
-yarn set version 1.21.1
+yarn set version 1.22.19
 
 echoerr "yarn setup:"
 yarn --frozen-lockfile setup
